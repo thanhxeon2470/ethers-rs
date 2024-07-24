@@ -179,7 +179,7 @@ pub enum Chain {
 
     Viction = 88,
     Blast = 81457,
-    AIETestnet = 413413,
+    AieTestnet = 413413,
     CrossValueTestnet = 5555,
 
     Zora = 7777777,
@@ -321,7 +321,7 @@ impl Chain {
             Gnosis | Chiado => 5_000,
             Viction => 2_000,
             Blast => 2_000,
-            AIETestnet => 2_000,
+            AieTestnet => 2_000,
             CrossValueTestnet => 2_000,
             // Explicitly exhaustive. See NB above.
             Morden | Ropsten | Rinkeby | Goerli | Kovan | Sepolia | Holesky | Moonbase
@@ -373,7 +373,7 @@ impl Chain {
             | Metis
             | Viction
             | Blast
-            | AIETestnet
+            | AieTestnet
             | CrossValueTestnet
             | Scroll
             | ScrollSepolia => true,
@@ -617,7 +617,7 @@ impl Chain {
             }
             Viction => ("https://www.vicscan.xyz/api", "https://www.vicscan.xyz"),
             Blast => ("https://api.blastscan.io/api", "https://blastscan.io"),
-            AIETestnet => ("https://testnet.aiescan.io/api", "https://testnet.aiescan.io"),
+            AieTestnet => ("https://testnet.aiescan.io/api", "https://testnet.aiescan.io"),
             CrossValueTestnet => {
                 ("https://testnet.crossvaluescan.com/api", "https://testnet.crossvaluescan.com/")
             }
@@ -707,7 +707,7 @@ impl Chain {
             | LineaTestnet
             | Viction
             | Blast
-            | AIETestnet
+            | AieTestnet
             | CrossValueTestnet
             | FilecoinCalibrationTestnet => return None,
         };
@@ -788,7 +788,7 @@ mod tests {
             (MantleTestnet, &["mantle-testnet"]),
             (Viction, &["viction"]),
             (Blast, &["blast"]),
-            (AIETestnet, &["aie-testnet"]),
+            (AieTestnet, &["aie-testnet"]),
             (CrossValueTestnet, &["cross-value-testnet"]),
         ];
 
