@@ -181,6 +181,8 @@ pub enum Chain {
     Blast = 81457,
     AieTestnet = 413413,
     CrossValueTestnet = 5555,
+    U2u = 39,
+    U2uTestnet = 2484,
 
     Zora = 7777777,
     ZoraGoerli = 999,
@@ -323,6 +325,8 @@ impl Chain {
             Blast => 2_000,
             AieTestnet => 2_000,
             CrossValueTestnet => 2_000,
+            U2u => 2_000,
+            U2uTestnet => 2_000,
             // Explicitly exhaustive. See NB above.
             Morden | Ropsten | Rinkeby | Goerli | Kovan | Sepolia | Holesky | Moonbase
             | MoonbeamDev | OptimismKovan | Poa | Sokol | Rsk | EmeraldTestnet | Boba | Base
@@ -375,6 +379,8 @@ impl Chain {
             | Blast
             | AieTestnet
             | CrossValueTestnet
+            | U2u
+            | U2uTestnet
             | Scroll
             | ScrollSepolia => true,
 
@@ -621,6 +627,8 @@ impl Chain {
             CrossValueTestnet => {
                 ("https://testnet.crossvaluescan.com/api", "https://testnet.crossvaluescan.com/")
             }
+            U2u => ("https://u2uscan.xyz/api", "https://u2uscan.xyz/"),
+            U2uTestnet => ("https://testnet.u2uscan.xyz/api", "https://testnet.u2uscan.xyz/"),
         };
 
         Some(urls)
@@ -709,6 +717,8 @@ impl Chain {
             | Blast
             | AieTestnet
             | CrossValueTestnet
+            | U2u
+            | U2uTestnet
             | FilecoinCalibrationTestnet => return None,
         };
 
@@ -790,6 +800,8 @@ mod tests {
             (Blast, &["blast"]),
             (AieTestnet, &["aie-testnet"]),
             (CrossValueTestnet, &["cross-value-testnet"]),
+            (U2u, &["u2u"]),
+            (U2uTestnet, &["u2u-testnet"]),
         ];
 
         for &(chain, aliases) in ALIASES {
