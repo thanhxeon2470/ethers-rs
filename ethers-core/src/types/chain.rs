@@ -184,6 +184,7 @@ pub enum Chain {
     CrossValueTestnet = 5555,
     U2u = 39,
     U2uTestnet = 2484,
+    Klaytn = 8217,
 
     Zora = 7777777,
     ZoraGoerli = 999,
@@ -328,6 +329,7 @@ impl Chain {
             CrossValueTestnet => 2_000,
             U2u => 2_000,
             U2uTestnet => 2_000,
+            Klaytn => 2_000,
             // Explicitly exhaustive. See NB above.
             Morden | Ropsten | Rinkeby | Goerli | Kovan | Sepolia | Holesky | Moonbase
             | MoonbeamDev | OptimismKovan | Poa | Sokol | Rsk | EmeraldTestnet | Boba | Base
@@ -381,6 +383,7 @@ impl Chain {
             | CrossValueTestnet
             | U2u
             | U2uTestnet
+            | Klaytn
             | Scroll
             | ScrollSepolia => true,
 
@@ -631,6 +634,7 @@ impl Chain {
             }
             U2u => ("https://u2uscan.xyz/api", "https://u2uscan.xyz/"),
             U2uTestnet => ("https://testnet.u2uscan.xyz/api", "https://testnet.u2uscan.xyz/"),
+            Klaytn => ("https://klaytnscope.com/api", "https://klaytnscope.com/"),
         };
 
         Some(urls)
@@ -722,6 +726,7 @@ impl Chain {
             | CrossValueTestnet
             | U2u
             | U2uTestnet
+            | Klaytn
             | FilecoinCalibrationTestnet => return None,
         };
 
