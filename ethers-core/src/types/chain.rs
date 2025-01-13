@@ -185,7 +185,7 @@ pub enum Chain {
     U2u = 39,
     U2uTestnet = 2484,
     Klaytn = 8217,
-    DatagramTestnet = 1160453,
+    DatagramTestnet = 131,
 
     Zora = 7777777,
     ZoraGoerli = 999,
