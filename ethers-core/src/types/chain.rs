@@ -186,6 +186,7 @@ pub enum Chain {
     U2uTestnet = 2484,
     Klaytn = 8217,
     DatagramTestnet = 131,
+    Sonic = 146,
 
     Zora = 7777777,
     ZoraGoerli = 999,
@@ -332,6 +333,7 @@ impl Chain {
             U2uTestnet => 2_000,
             Klaytn => 2_000,
             DatagramTestnet => 2_000,
+            Sonic => 2_000,
             // Explicitly exhaustive. See NB above.
             Morden | Ropsten | Rinkeby | Goerli | Kovan | Sepolia | Holesky | Moonbase
             | MoonbeamDev | OptimismKovan | Poa | Sokol | Rsk | EmeraldTestnet | Boba | Base
@@ -387,6 +389,7 @@ impl Chain {
             | U2uTestnet
             | Klaytn
             | DatagramTestnet
+            | Sonic
             | Scroll
             | ScrollSepolia => true,
 
@@ -639,6 +642,7 @@ impl Chain {
             U2uTestnet => ("https://testnet.u2uscan.xyz/api", "https://testnet.u2uscan.xyz/"),
             Klaytn => ("https://klaytnscope.com/api", "https://klaytnscope.com/"),
             DatagramTestnet => ("https://testnet.datagram.network/api", "https://testnet.datagram.network/"),
+            Sonic => ("https://soniclab.com/api", "https://soniclab.com/"),
         };
 
         Some(urls)
@@ -732,6 +736,7 @@ impl Chain {
             | U2uTestnet
             | Klaytn
             | DatagramTestnet
+            | Sonic
             | FilecoinCalibrationTestnet => return None,
         };
 

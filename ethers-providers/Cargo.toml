@@ -32,7 +32,7 @@ http = "0.2"
 reqwest = { workspace = true, features = ["json"] }
 url.workspace = true
 base64 = "0.21"
-jsonwebtoken = "8"
+jsonwebtoken = { git = "https://github.com/Keats/jsonwebtoken.git", rev = "e5ba5a1dcaf546798895a921cee41bce3ebb6e53" }
 
 async-trait.workspace = true
 hex.workspace = true
@@ -51,7 +51,10 @@ futures-channel = { workspace = true, optional = true }
 pin-project.workspace = true
 
 # peer-related admin namespace
-enr = { version = "0.9.0", default-features = false, features = ["k256", "serde"] }
+enr = { version = "0.9.0", default-features = false, features = [
+    "k256",
+    "serde",
+] }
 
 # tracing
 tracing = { workspace = true, features = ["attributes"] }
@@ -63,7 +66,9 @@ winapi = { version = "0.3", optional = true }
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 # tokio
 tokio = { workspace = true, features = ["time"] }
-tokio-tungstenite = { workspace = true, features = ["connect"], optional = true }
+tokio-tungstenite = { workspace = true, features = [
+    "connect",
+], optional = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 ws_stream_wasm = "0.7"
